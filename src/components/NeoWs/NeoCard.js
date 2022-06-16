@@ -5,6 +5,8 @@ const StyledNeoCard = styled.div`
   border: solid black 2px;
   margin-left: 1rem;
   margin-right: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 `;
 
 const NeoCard = (props) => {

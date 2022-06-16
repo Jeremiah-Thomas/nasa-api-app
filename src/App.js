@@ -15,9 +15,15 @@ function App() {
   const [api, setApi] = useState("APOD");
   if (api === "APOD") {
     return (
-      <div>
-        <DateEntry setDate={setQueryDate} api={api} setApi={setApi}></DateEntry>
-        <APOD date={queryDate}></APOD>
+      <div className="App">
+        <div>
+          <DateEntry
+            setDate={setQueryDate}
+            api={api}
+            setApi={setApi}
+          ></DateEntry>
+          <APOD date={queryDate}></APOD>
+        </div>
       </div>
     );
   } else if (api === "NeoWs") {

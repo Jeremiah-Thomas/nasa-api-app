@@ -11,7 +11,10 @@ const Card = styled.div`
 
 const StyledImg = styled.img`
   width: 95%;
-  height: 70vh;
+  height: 60vh;
+  @media (max-width: 400px) {
+    height: 45vh;
+  }
 `;
 
 const MarsRoverCard = (props) => {

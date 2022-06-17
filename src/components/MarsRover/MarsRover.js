@@ -13,6 +13,11 @@ const ImgList = styled.div`
     margin-left: auto;
     margin-right: auto;
     gap: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    @media (max-width: 400px){
+        max-width: 100%;
+    }
 `;
 
 const MarsRover = (props) => {

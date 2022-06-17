@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NeoWs from "./components/NeoWs/NeoWs";
 import APOD from "./components/APOD/APOD";
 import DateEntry from "./components/DateEntry";
+import MarsRover from "./components/MarsRover/MarsRover";
 import "./App.css";
 
 function App() {
@@ -31,6 +32,13 @@ function App() {
       <div className="App">
         <DateEntry setDate={setQueryDate} api={api} setApi={setApi}></DateEntry>
         <NeoWs date={queryDate} />
+      </div>
+    );
+  } else if (api === "Mars Rover Photos") {
+    return (
+      <div className="App">
+        <DateEntry setDate={setQueryDate} api={api} setApi={setApi}></DateEntry>
+        <MarsRover date={queryDate} />
       </div>
     );
   }

@@ -12,7 +12,7 @@ const Card = styled.div`
 const StyledImg = styled.img`
   width: 95%;
   height: 60vh;
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     height: 35vh;
   }
 `;

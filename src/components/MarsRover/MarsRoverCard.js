@@ -13,7 +13,7 @@ const StyledImg = styled.img`
   width: 95%;
   height: 60vh;
   @media (max-width: 400px) {
-    height: 45vh;
+    height: 35vh;
   }
 `;
 

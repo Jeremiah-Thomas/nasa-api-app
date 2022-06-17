@@ -4,20 +4,19 @@ import styled from "styled-components";
 import MarsRoverCard from "./MarsRoverCard";
 
 const ImgList = styled.div`
-    border solid black 2px;
-    max-width: 90%;
-    max-height: 100vh;
-    overflow-y: scroll;
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 1rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    @media (max-width: 400px){
-        max-width: 100%;
-    }
+  max-width: 90%;
+  max-height: 100vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  @media (max-width: 400px) {
+    max-width: 100%;
+  }
 `;
 
 const MarsRover = (props) => {

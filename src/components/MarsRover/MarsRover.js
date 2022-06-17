@@ -5,7 +5,7 @@ import MarsRoverCard from "./MarsRoverCard";
 
 const ImgList = styled.div`
     border solid black 2px;
-    max-width: 80%;
+    max-width: 90%;
     max-height: 100vh;
     overflow-y: scroll;
     display: flex;

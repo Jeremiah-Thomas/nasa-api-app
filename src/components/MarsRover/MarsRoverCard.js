@@ -10,7 +10,7 @@ const Card = styled.div`
 `;
 
 const StyledImg = styled.img`
-  width: 90%;
+  width: 95%;
   height: 70vh;
 `;
 

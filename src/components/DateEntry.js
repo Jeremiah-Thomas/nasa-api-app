@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
@@ -15,8 +15,12 @@ const StyledH1 = styled.h1`
 `;
 
 const DateEntry = (props) => {
-  //   const [api, setApi] = useState("APOD");
-  let inputDate;
+  const [inputText, setInputText] = useState();
+
+  const onChange = (e) => {
+    setInputText(e.target.value);
+  };
+
   return (
     <>
       <StyledHeader>
@@ -24,6 +28,7 @@ const DateEntry = (props) => {
           onChange={(evt) => {
             props.setApi(evt.target.value);
           }}
+          value={props.api}
         >
           <option value="APOD">Astrology Picture of The Day</option>
           <option value="NeoWs">Near Earth Objects</option>
@@ -33,17 +38,30 @@ const DateEntry = (props) => {
         <input
           type="text"
           placeholder="YYYY-MM-DD"
-          onChange={(evt) => {
-            inputDate = evt.target.value;
-          }}
+          onChange={onChange}
+          value={inputText}
         ></input>
-        <button onClick={() => props.setDate(inputDate)}>
+        <button
+          onClick={() => {
+            if (!inputText) {
+              alert("Please enter a date first!");
+            } else {
+              props.setDate(inputText);
+            }
+          }}
+        >
           Get Data For That Day
         </button>
         <button
           onClick={() => {
             const today = new Date();
             props.setDate(
+              `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(
+                2,
+                "0"
+              )}-${String(today.getDate()).padStart(2, "0")}`
+            );
+            setInputText(
               `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(
                 2,
                 "0"

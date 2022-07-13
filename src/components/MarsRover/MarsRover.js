@@ -20,7 +20,6 @@ const ImgList = styled.div`
 
 const MarsRover = (props) => {
   const [data, setData] = useState();
-  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     axios
@@ -30,18 +29,19 @@ const MarsRover = (props) => {
       .then((res) => {
         console.log(props.date);
         setData(res.data);
-        setIsLoaded(true);
       })
       .catch((err) => {
         console.log(err);
-        setIsLoaded(false);
       });
   }, [props.date]);
-
-  return (
-    <>
-      {!isLoaded && <p>Loading... be sure to enter date before today's date</p>}
-      {isLoaded && (
+  if (!data) {
+    return <p>Loading ...</p>;
+  } else if (data.photos.length === 0) {
+    return <p>Try a different date</p>;
+  } else {
+    return (
+      <>
+        {console.log(data)}
         <ImgList>
           {data.photos.map((photo) => {
             return (
@@ -56,9 +56,9 @@ const MarsRover = (props) => {
             );
           })}
         </ImgList>
-      )}
-    </>
-  );
+      </>
+    );
+  }
 };
 
 export default MarsRover;

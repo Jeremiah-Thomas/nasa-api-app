@@ -5,7 +5,9 @@ const Card = styled.div`
   width: 75%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5rem;
+  margin-top: 1rem;
+  border: black solid 2px;
+  padding: 1rem;
   img {
     max-width: 100%;
   }

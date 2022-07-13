@@ -33,18 +33,21 @@ const Explanation = styled.p`
 const APODCard = (props) => {
   if (!props.data) {
     return <h1>Loading...</h1>;
+  } else if (Object.keys(props.data).length === 0) {
+    return <p>Try a different date</p>;
+  } else {
+    return (
+      <StyledCard>
+        <StyledImg
+          src={props.data.hdurl}
+          alt="space captured by NASA"
+        ></StyledImg>
+        <Copyright>Copyright: {props.data.copyright}</Copyright>
+        <h3>Date: {props.data.date}</h3>
+        <Explanation>{props.data.explanation}</Explanation>
+      </StyledCard>
+    );
   }
-  return (
-    <StyledCard>
-      <StyledImg
-        src={props.data.hdurl}
-        alt="space captured by NASA"
-      ></StyledImg>
-      <Copyright>Copyright: {props.data.copyright}</Copyright>
-      <h3>Date: {props.data.date}</h3>
-      <Explanation>{props.data.explanation}</Explanation>
-    </StyledCard>
-  );
 };
 
 export default APODCard;

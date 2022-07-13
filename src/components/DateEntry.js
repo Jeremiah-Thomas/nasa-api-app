@@ -36,7 +36,7 @@ const DateEntry = (props) => {
           <option value="EPIC">Earth Polychromatic Imaging Camera</option>
         </select>
         <input
-          type="text"
+          type="date"
           placeholder="YYYY-MM-DD"
           onChange={onChange}
           value={inputText}

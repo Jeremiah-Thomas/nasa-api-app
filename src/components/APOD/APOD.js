@@ -13,7 +13,10 @@ const AOPD = (props) => {
         const result = res.data;
         setData(result);
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        console.error(err);
+        setData({});
+      });
   }, [props.date]);
 
   return (

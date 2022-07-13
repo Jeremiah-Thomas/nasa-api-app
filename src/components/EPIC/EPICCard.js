@@ -21,7 +21,7 @@ const EPICCard = (props) => {
       <div>
         {props.data.map((data) => {
           return (
-            <Card>
+            <Card key={data.date}>
               <img
                 src={`https://epic.gsfc.nasa.gov/archive/natural/${props.date.slice(
                   0,

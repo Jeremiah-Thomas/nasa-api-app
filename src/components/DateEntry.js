@@ -16,7 +16,7 @@ const StyledH1 = styled.h1`
 `;
 
 const DateEntry = (props) => {
-  const [inputText, setInputText] = useState();
+  const [inputText, setInputText] = useState(props.date);
 
   const onChange = (e) => {
     setInputText(e.target.value);

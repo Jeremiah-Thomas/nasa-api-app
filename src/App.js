@@ -19,7 +19,12 @@ function App() {
     return (
       <div className="App">
         <div>
-          <DateEntry setDate={setQueryDate} api={api} setApi={setApi} />
+          <DateEntry
+            setDate={setQueryDate}
+            api={api}
+            setApi={setApi}
+            date={queryDate}
+          />
           <APOD date={queryDate}></APOD>
         </div>
       </div>
@@ -27,21 +32,36 @@ function App() {
   } else if (api === "NeoWs") {
     return (
       <div className="App">
-        <DateEntry setDate={setQueryDate} api={api} setApi={setApi} />
+        <DateEntry
+          setDate={setQueryDate}
+          api={api}
+          setApi={setApi}
+          date={queryDate}
+        />
         <NeoWs date={queryDate} />
       </div>
     );
   } else if (api === "Mars Rover Photos") {
     return (
       <div className="App">
-        <DateEntry setDate={setQueryDate} api={api} setApi={setApi} />
+        <DateEntry
+          setDate={setQueryDate}
+          api={api}
+          setApi={setApi}
+          date={queryDate}
+        />
         <MarsRover date={queryDate} />
       </div>
     );
   } else if (api === "EPIC") {
     return (
       <div className="App">
-        <DateEntry setDate={setQueryDate} api={api} setApi={setApi} />
+        <DateEntry
+          setDate={setQueryDate}
+          api={api}
+          setApi={setApi}
+          date={queryDate}
+        />
         <EPIC date={queryDate} />
       </div>
     );

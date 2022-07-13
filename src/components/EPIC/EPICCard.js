@@ -29,6 +29,7 @@ const EPICCard = (props) => {
                 )}/${props.date.slice(5, 7)}/${props.date.slice(8, 10)}/jpg/${
                   data.image
                 }.jpg`}
+                alt=""
               />
               <h1>Date: {data.date}</h1>
               <p>{data.caption}</p>

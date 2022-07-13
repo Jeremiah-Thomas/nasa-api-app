@@ -7,7 +7,7 @@ const Card = styled.div`
   margin-right: auto;
   margin-top: 5rem;
   img {
-    max-width: 80%;
+    max-width: 100%;
   }
 `;
 

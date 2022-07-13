@@ -4,6 +4,7 @@ import APOD from "./components/APOD/APOD";
 import DateEntry from "./components/DateEntry";
 import MarsRover from "./components/MarsRover/MarsRover";
 import "./App.css";
+import EPIC from "./components/EPIC/EPIC";
 
 function App() {
   const today = new Date();
@@ -18,11 +19,7 @@ function App() {
     return (
       <div className="App">
         <div>
-          <DateEntry
-            setDate={setQueryDate}
-            api={api}
-            setApi={setApi}
-          ></DateEntry>
+          <DateEntry setDate={setQueryDate} api={api} setApi={setApi} />
           <APOD date={queryDate}></APOD>
         </div>
       </div>
@@ -30,15 +27,22 @@ function App() {
   } else if (api === "NeoWs") {
     return (
       <div className="App">
-        <DateEntry setDate={setQueryDate} api={api} setApi={setApi}></DateEntry>
+        <DateEntry setDate={setQueryDate} api={api} setApi={setApi} />
         <NeoWs date={queryDate} />
       </div>
     );
   } else if (api === "Mars Rover Photos") {
     return (
       <div className="App">
-        <DateEntry setDate={setQueryDate} api={api} setApi={setApi}></DateEntry>
+        <DateEntry setDate={setQueryDate} api={api} setApi={setApi} />
         <MarsRover date={queryDate} />
+      </div>
+    );
+  } else if (api === "EPIC") {
+    return (
+      <div className="App">
+        <DateEntry setDate={setQueryDate} api={api} setApi={setApi} />
+        <EPIC date={queryDate} />
       </div>
     );
   }

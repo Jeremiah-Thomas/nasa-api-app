@@ -28,6 +28,7 @@ const DateEntry = (props) => {
           <option value="APOD">Astrology Picture of The Day</option>
           <option value="NeoWs">Near Earth Objects</option>
           <option value="Mars Rover Photos">Mars Rover Photos</option>
+          <option value="EPIC">Earth Polychromatic Imaging Camera</option>
         </select>
         <input
           type="text"

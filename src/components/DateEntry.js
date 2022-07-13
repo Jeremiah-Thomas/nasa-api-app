@@ -8,6 +8,7 @@ const StyledHeader = styled.header`
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  backdrop-filter: blur(4px);
 `;
 
 const StyledH1 = styled.h1`

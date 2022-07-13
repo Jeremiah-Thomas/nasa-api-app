@@ -37,7 +37,7 @@ const MarsRover = (props) => {
   if (!data) {
     return <p>Loading ...</p>;
   } else if (data.photos.length === 0) {
-    return <p>Try a different date</p>;
+    return <h2>Try a different date</h2>;
   } else {
     return (
       <>

@@ -8,6 +8,8 @@ const Card = styled.div`
   margin-top: 1rem;
   border: black solid 2px;
   padding: 1rem;
+  backdrop-filter: blur(1rem);
+  border-radius: 0.5rem;
   img {
     max-width: 100%;
   }
@@ -17,7 +19,7 @@ const EPICCard = (props) => {
   if (!props.data) {
     return <p>Loading ...</p>;
   } else if (props.data.length === 0) {
-    return <p>Try a different date after 2015-09-01 and before today</p>;
+    return <h2>Try a different date after 2015-09-01 and before today</h2>;
   } else {
     return (
       <div>

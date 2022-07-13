@@ -7,6 +7,8 @@ const StyledNeoCard = styled.div`
   margin-right: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  backdrop-filter: blur(1rem);
+  border-radius: 0.5rem;
 `;
 
 const NeoCard = (props) => {

@@ -12,6 +12,8 @@ const StyledCard = styled.div`
   border: solid black 2px;
   padding: 1rem;
   text-align: center;
+  backdrop-filter: blur(1rem);
+  border-radius: 0.5rem;
 `;
 
 const StyledImg = styled.img`
@@ -27,14 +29,13 @@ const Copyright = styled.p`
 
 const Explanation = styled.p`
   line-height: 2rem;
-  opacity: 0.8;
 `;
 
 const APODCard = (props) => {
   if (!props.data) {
     return <h1>Loading...</h1>;
   } else if (Object.keys(props.data).length === 0) {
-    return <p>Try a different date</p>;
+    return <h2>Try a different date</h2>;
   } else {
     return (
       <StyledCard>

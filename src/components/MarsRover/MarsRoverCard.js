@@ -7,6 +7,8 @@ const Card = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
+  backdrop-filter: blur(1rem);
+  border-radius: 0.5rem;
 `;
 
 const StyledImg = styled.img`
